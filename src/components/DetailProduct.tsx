@@ -12,7 +12,7 @@ const DetailProduct = () => {
   const productId = productIdFromParams || productIdFromContext;
   const{product} = useGetProductById(productId)
   console.log(product)
-//
+///
   return (
     <ProductsProvider>
       <div>{productId}</div>

@@ -26,7 +26,7 @@ export async function getAllProducts() {
       throw error;
     }
   }
-//
+///
   export async function createProduct(
     PostProduct: Productos
   ) {
