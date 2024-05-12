@@ -87,13 +87,13 @@ export async function getAllProducts() {
     }
   }
 
-  export async function deleteProduct(productId: number) {
+  export async function deleteProduct(productId: string) {
     let response;
     try {
       response = await fetch(
         `https://${
           import.meta.env.VITE_API_URL
-        }.mockapi.io/Abarrotes${productId}`,
+        }.mockapi.io/Abarrotes/${productId}`,
         {
           method: "DELETE",
           headers: { "Content-Type": "application/json" },

@@ -10,7 +10,7 @@ export default function useGetProductById (ProductId:string) {
               const product = await getProductById(ProductId);
               setProduct(product);
             } catch (error) {
-              console.error("Error to get product", error);
+              console.error("Error al llamar producto", error);
             }
           }
       

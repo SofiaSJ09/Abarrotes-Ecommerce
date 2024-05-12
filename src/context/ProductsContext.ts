@@ -1,16 +1,17 @@
-import React from "react";
+// ProductsContext.tsx
+
+import React, { createContext, useContext } from "react";
 
 type ProductsContextType = {
-    ProducId: string;
-    setProducId: (text: string) => void;
-
+  productId: string; // Asegúrate de que el tipo incluya la propiedad productId
+  setProductId: (productId: string) => void;
 };
-//COMPLETAR EL CONTEXT CON LO QUE NECESITE
-const ProductsContext = React.createContext<ProductsContextType>({
- 
-  ProducId: "",
-  setProducId: () => {},
 
+const ProductsContext = createContext<ProductsContextType>({
+  productId: "",
+  setProductId: () => {},
 });
+
+export const useProductsContext = () => useContext(ProductsContext);
 
 export default ProductsContext;

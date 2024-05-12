@@ -1,14 +1,16 @@
-import { ReactNode, useState } from "react";
+// ProductsProvider.tsx
+
+import React, { ReactNode, useState } from "react";
 import ProductsContext from "./ProductsContext";
 
 const ProductsProvider = ({ children }: { children: ReactNode }) => {
-  const [ProducId, setProducId] = useState("");
- 
+  const [productId, setProductId] = useState("");
+
   return (
     <ProductsContext.Provider
       value={{
-        ProducId,
-        setProducId,
+        productId,
+        setProductId,
       }}
     >
       {children}
