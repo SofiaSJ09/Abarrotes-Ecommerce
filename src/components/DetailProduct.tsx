@@ -1,5 +1,3 @@
-// DetailProduct.tsx
-
 import React from "react";
 import { useParams } from "react-router";
 import { useProductsContext } from "../context/ProductsContext"; // Importa el hook del contexto
@@ -14,7 +12,7 @@ const DetailProduct = () => {
   const productId = productIdFromParams || productIdFromContext;
   const{product} = useGetProductById(productId)
   console.log(product)
-
+//
   return (
     <ProductsProvider>
       <div>{productId}</div>
